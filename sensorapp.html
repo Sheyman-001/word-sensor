@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word sensor App</title>
+    <style>
+        body {font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+            background: blueviolet;
+        }
+        .sheyman{
+            background: rgba(193, 206, 8, 0.708);
+            width: 400px;
+            height: 300px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 50%;
+
+
+            h1{
+        color: blue;
+        margin-top: 10px;
+            }
+
+
+
+        }
+        
+            .send-btn {
+                margin-top:50px;
+                width: 20%;
+                height: 30px;
+                background-color: blue;
+                border-radius: 10px;
+               }
+
+
+
+        #text-in{
+      width: 100%;
+      margin: auto;
+      height: 50px;
+      background:white;
+      border-radius: 20px;
+      border: 20px;
+    }
+     
+    
+        #text-show{
+      width: 20%;
+      height: 10px;
+      margin: auto;
+      background:white;
+      border-radius: 20px;
+      border: 20px;
+      padding: 42px;
+
+    }
+            
+
+        
+    </style>
+</head>
+
+<body>
+
+  <div class="container">
+    
+
+    <div class="sheyman">
+         <h1>Word Sensor App</h1>
+    
+    <input type="text" id="text-in" placeholder="Enter your text here..."/>
+
+    <br>
+    <br>
+
+      <button class="send-btn" onclick="sendText()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M487-104 150-440h114l280 280 200-200H640v-80h240v240h-80v-104L600-104q-23 23-56.5 23T487-104ZM80-520v-240h80v104l200-200q23-23 56.5-23t56.5 23l337 336H696L416-800 216-600h104v80H80Z"/></svg></button>
+    </div>
+
+    <div id="text-show"></div>
+
+  </div>
+
+</body>
+<script>
+    let entertext = document.getElementById("text-in");
+    let textappear = document.getElementById("text-show");
+    
+    function sendText() {
+        let text = entertext.value.replace("fool" , "****").replace("sex" , "s*x").replace("dick" , "*i*k").replace("pussy" , "p*s*y");
+        console.log(text);
+
+
+        textappear.innerHTML = text;
+        
+    }
+  </script>
+</body>
+</html>
